@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-i18n="docTitle">Video downloader &mdash; YouTube, Facebook, Instagram</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%AC%87%EF%B8%8F%3C/text%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <main class="wrap">
+      <header>
+        <div class="topbar">
+          <h1 data-i18n="headerTitle">Video downloader</h1>
+          <label class="lang-picker">
+            <span class="visually-hidden" data-i18n="langLabel">Language</span>
+            <select id="lang" data-i18n-attr="aria-label:langLabel"></select>
+          </label>
+        </div>
+        <p class="sub" data-i18n-html="headerSub">Paste a <strong>YouTube</strong>, <strong>Facebook</strong> or <strong>Instagram</strong> link to grab it as MP4 or MP3.</p>
+      </header>
+
+      <form id="form" autocomplete="off">
+        <input
+          id="url"
+          name="url"
+          type="url"
+          inputmode="url"
+          placeholder="https://www.youtube.com/watch?v=..."
+          required
+        />
+        <button id="analyze" type="submit" data-i18n="analyze">Analyze</button>
+      </form>
+
+      <p id="status" class="status" hidden></p>
+
+      <section id="result" class="card" hidden>
+        <div class="media">
+          <img id="thumb" alt="" hidden />
+          <div class="meta">
+            <span id="badge" class="badge"></span>
+            <h2 id="title"></h2>
+            <p id="details" class="details"></p>
+          </div>
+        </div>
+        <div class="choices">
+          <h3 data-i18n="chooseFormat">Choose a format</h3>
+          <div id="qualities" class="qualities"></div>
+        </div>
+        <p id="dlNote" class="dl-note" hidden></p>
+      </section>
+
+      <footer>
+        <p data-i18n="footerNote">
+          Some videos (private, members-only, age-restricted, Instagram stories, non-public Facebook
+          content) require sign-in and cannot be downloaded: the site tells you clearly when that happens.
+        </p>
+        <p class="fine" data-i18n="footerFine">Personal-use tool. Respect copyright and the platforms' terms of service.</p>
+      </footer>
+    </main>
+
+    <script src="/i18n.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>
