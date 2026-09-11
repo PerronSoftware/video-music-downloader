@@ -32,6 +32,10 @@ Wahl erzwingen, die dann gespeichert wird (im `localStorage`).
 ## Voraussetzungen
 
 - Node.js 18 oder neuer.
+- **Nur macOS / Linux:** ein systemweit installiertes **Python 3.10 oder neuer**. Auf diesen
+  Plattformen benötigt die installierte `yt-dlp`-Binärdatei einen separaten Python-Interpreter,
+  um zu laufen (der Windows-Build ist eigenständig, das gilt dort also nicht). Prüfen mit
+  `python3 --version`; unter macOS bei Bedarf `brew install python3`.
 
 ## Installation
 

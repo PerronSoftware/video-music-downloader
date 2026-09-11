@@ -32,6 +32,10 @@ cima alla pagina permette di forzare la scelta, che viene poi memorizzata (nel
 ## Requisiti
 
 - Node.js 18 o successivo.
+- **Solo macOS / Linux:** un **Python 3.10 o successivo** installato nel sistema. Su queste
+  piattaforme, il binario `yt-dlp` installato richiede un interprete Python separato per
+  funzionare (la build Windows è autonoma, quindi lì non si applica). Verifica con
+  `python3 --version`; su macOS, `brew install python3` se troppo vecchio.
 
 ## Installazione
 

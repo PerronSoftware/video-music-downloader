@@ -31,6 +31,10 @@ the page overrides the choice and remembers it (stored in `localStorage`).
 ## Requirements
 
 - Node.js 18 or later.
+- **macOS / Linux only:** a system **Python 3.10 or later**. On these platforms the `yt-dlp`
+  binary that gets installed needs a separately-installed Python interpreter to run (the
+  Windows build is self-contained, so this doesn't apply there). Check with `python3 --version`;
+  on macOS, `brew install python3` if it's too old.
 
 ## Installation
 

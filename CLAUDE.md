@@ -18,6 +18,15 @@ npm run dev           # same, with --watch reload
 
 Requires Node.js 18+. There is **no test suite and no linter** configured.
 
+On macOS/Linux, a system **Python 3.10+ (CPython)** is also required at runtime.
+`youtube-dl-exec` downloads the generic `yt-dlp` GitHub release asset on Unix (see
+`YOUTUBE_DL_FILENAME` in its `src/constants.js` — no OS-specific suffix is applied outside
+`win32`), and that particular asset is a zipimport binary that needs an external Python
+interpreter to run — unlike the Windows `.exe`, which is a self-contained PyInstaller build.
+The package's own `preinstall.mjs` only checks for Python `>=3.9` (`YOUTUBE_DL_SKIP_PYTHON_CHECK=1`
+skips it entirely), which can pass while yt-dlp itself then refuses to start on 3.9. Verify with
+`python3 --version`; on macOS, `brew install python3` if it's too old.
+
 On boot, `server.js` runs `checkBinary()` for yt-dlp and ffmpeg but only **warns** — the
 server still listens even if the binaries are missing or unresponsive, and requests then
 fail at probe/download time.

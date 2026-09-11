@@ -32,6 +32,10 @@ langue en haut de page permet de forcer le choix, qui est ensuite mémorisé (da
 ## Prérequis
 
 - Node.js 18 ou plus.
+- **Mac / Linux uniquement :** un **Python 3.10 ou plus** installé sur le système. Sur ces
+  plateformes, le binaire `yt-dlp` installé a besoin d'un interpréteur Python séparé pour
+  fonctionner (le build Windows est autonome, donc ça ne s'applique pas là). Vérifier avec
+  `python3 --version` ; sur Mac, `brew install python3` si la version est trop vieille.
 
 ## Installation
 
